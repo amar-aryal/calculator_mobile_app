@@ -77,7 +77,7 @@ class CalculatorScreen extends StatelessWidget {
 
   calculateExpressions(String exp) {
     try {
-      num result = exp.replaceAll('%', '*(0.01)*').interpret();
+      num result = exp.replaceAll('%', '*0.01*').interpret();
       displayText.value =
           (result % 1) == 0 ? result.toInt().toString() : result.toString();
     } catch (e) {
